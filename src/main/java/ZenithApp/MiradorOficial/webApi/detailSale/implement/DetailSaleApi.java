@@ -16,7 +16,6 @@ import lombok.extern.log4j.Log4j2;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
-@CrossOrigin(origins = "http://localhost:3000")
 @RestController
 @RequestMapping(IDetailSaleEndPoint.BASE_URL)
 @Tag(name = "Sistema de Gestión de detalles de venta", description = "Crear, visualizar, eliminar y actualizar detalles de venta")

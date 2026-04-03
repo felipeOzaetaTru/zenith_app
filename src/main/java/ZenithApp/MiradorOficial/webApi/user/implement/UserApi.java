@@ -14,7 +14,6 @@ import io.swagger.v3.oas.annotations.tags.Tag;
 import lombok.extern.log4j.Log4j2;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
-@CrossOrigin(origins = "http://localhost:3000")
 @RestController
 @RequestMapping(IUserEndPoint.USER_BASE_URL)
 @Tag(name = "Sistema de Gestión de Usuario", description = "Crear, visualizar, eliminar y actualizar Usuario")
