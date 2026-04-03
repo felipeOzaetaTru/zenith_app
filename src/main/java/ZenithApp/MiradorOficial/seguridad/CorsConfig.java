@@ -16,6 +16,7 @@ public class CorsConfig {
         configuration.setAllowedOrigins(List.of("http://localhost:3000", "https://zenith-app-beta-4.vercel.app"));
         configuration.setAllowedMethods(List.of("GET", "POST", "PUT", "DELETE", "PATCH", "OPTIONS"));
         configuration.setAllowedHeaders(List.of("*"));
+        configuration.setAllowCredentials(true); // ✅ necesario para JWT/Authorization header
 
         UrlBasedCorsConfigurationSource source = new UrlBasedCorsConfigurationSource();
         source.registerCorsConfiguration("/**", configuration);
