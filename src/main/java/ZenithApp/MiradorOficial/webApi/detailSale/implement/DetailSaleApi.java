@@ -95,7 +95,7 @@ public class DetailSaleApi implements IDetailSaleApi {
                     content = {@Content(mediaType = "application/json")}),
             @ApiResponse(responseCode  = "500", description = GeneralResponse.INTERNAL_SERVER,
                     content = {@Content(mediaType = "application/json")})})
-    @PutMapping(IDetailSaleEndPoint.CREATE_DETAIL)
+    @PutMapping(IDetailSaleEndPoint.UPDATE_DETAIL)
     public ResponseEntity<GenericResponseDTO> updateDetailService(@RequestBody DetailSaleDTO detailSaleDTO) {
         return detailSaleService.updateDetailService(detailSaleDTO);
     }

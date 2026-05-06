@@ -70,8 +70,7 @@ public class SaleService implements ISaleService {
                 double subtotal = items.stream()
                         .mapToDouble(DetailSaleEntity::getSubtotal)
                         .sum();
-                double tip = subtotal * 0.19;
-                double total = subtotal + tip;
+
 
                 SaleEntity saleEntity = SaleEntity.newInstance()
                         .tableNumber(saleDTO.getTableNumber())
@@ -80,8 +79,7 @@ public class SaleService implements ISaleService {
                         .notes(saleDTO.getNotes())
                         .paymentMethod(saleDTO.getPaymentMethod())
                         .subtotal(subtotal)
-                        .tip(tip)
-                        .total(total)
+                        .total(subtotal)
                         .build();
 
                 items.forEach(item -> item.setSale(saleEntity));
